@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaxClient", "DaxClient\DaxClient.csproj", "{D9285D8D-DEA4-49B3-89EF-F72448F6CF39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaxClient.Tests", "DaxClient.Tests\DaxClient.Tests.csproj", "{5BD534E0-0EDA-4919-BCB9-87AEC3C2BAB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9285D8D-DEA4-49B3-89EF-F72448F6CF39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9285D8D-DEA4-49B3-89EF-F72448F6CF39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9285D8D-DEA4-49B3-89EF-F72448F6CF39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9285D8D-DEA4-49B3-89EF-F72448F6CF39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BD534E0-0EDA-4919-BCB9-87AEC3C2BAB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD534E0-0EDA-4919-BCB9-87AEC3C2BAB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD534E0-0EDA-4919-BCB9-87AEC3C2BAB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD534E0-0EDA-4919-BCB9-87AEC3C2BAB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
