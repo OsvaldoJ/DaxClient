@@ -1,14 +1,16 @@
 ﻿using Microsoft.AnalysisServices.AdomdClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DaxClient
 {
-    public class DaxCommand :DbCommand
+    public class DaxCommand : DbCommand
     {
         private AdomdCommand _command;
         private DaxConnection _connection;
@@ -109,6 +111,14 @@ namespace DaxClient
         protected override DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior behavior)
         {
             return new DaxDataReader(this._command.ExecuteReader(behavior));
+        }
+
+        protected override async Task<DbDataReader> ExecuteDbDataReaderAsync(System.Data.CommandBehavior behavior, System.Threading.CancellationToken cancellationToken)
+        {
+            return await Task<DaxDataReader>.Factory.StartNew(() =>
+            {
+                return this.ExecuteDbDataReader(behavior) as DaxDataReader;
+            });
         }
 
         public override int ExecuteNonQuery()

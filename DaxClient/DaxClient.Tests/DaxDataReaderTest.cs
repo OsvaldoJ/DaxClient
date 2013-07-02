@@ -45,7 +45,6 @@ namespace DaxClient.Tests
             Assert.AreEqual(25, dr.FieldCount);
         }
 
-
         [TestMethod]
         public void TestGetValue()
         {
@@ -54,6 +53,13 @@ namespace DaxClient.Tests
             Assert.IsNotNull(dr.GetValue(0));
         }
 
+        [TestMethod]
+        public void TestIsDBNull()
+        {
+            var dr = GetCommand().ExecuteReader();
+            dr.Read();
+            Assert.IsTrue(dr.IsDBNull(3));
+        }
 
         [TestMethod]
         public void TestSchema()

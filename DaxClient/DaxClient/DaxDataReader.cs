@@ -178,12 +178,12 @@ namespace DaxClient
 
         public override bool IsDBNull(int ordinal)
         {
-            throw new NotImplementedException();
+            return GetValue(ordinal) == null;
         }
 
         public override bool NextResult()
         {
-            throw new NotImplementedException();
+            return false;
         }
 
         public override bool Read()
@@ -193,17 +193,17 @@ namespace DaxClient
 
         public override int RecordsAffected
         {
-            get { throw new NotImplementedException(); }
+            get { throw new NotSupportedException(); }
         }
 
         public override object this[string name]
         {
-            get { throw new NotImplementedException(); }
+            get { return GetValue(GetOrdinal(name)); }
         }
 
         public override object this[int ordinal]
         {
-            get { throw new NotImplementedException(); }
+            get { return GetValue(ordinal); }
         }
     }
 }
